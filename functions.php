@@ -11,7 +11,7 @@ function theme_name_scripts()
 
     // ====== JS =========
     // js flexslider
-    wp_enqueue_script('js-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', [], 1, true);
+    wp_enqueue_script('js-flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', ['jquery'], 1, true);
     wp_enqueue_script('js-script', get_template_directory_uri() . '/assets/js/script.js', [], 1, true);
 
 
@@ -21,5 +21,7 @@ function theme_name_scripts()
 // правильный способ подключить стили и скрипты
 add_action('wp_enqueue_scripts', 'theme_name_scripts');
 
+
+add_theme_support('post-thumbnails');
 // add image size
-add_image_size('slider', 1200, 700, true);
+add_image_size('slides', 1200, 700, true);

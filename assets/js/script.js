@@ -1,6 +1,7 @@
 // Can also be used with $(document).ready()
-jQuery(window).load(function() {
-  jQuery('.flexslider').flexslider({
+jQuery(document).ready(function($) {
+  'use strict';
+  $('.flexslider').flexslider({
     animation: "slide"
   });
-});
+}(jQuery));
